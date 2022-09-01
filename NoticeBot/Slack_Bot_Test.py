@@ -13,8 +13,7 @@ def notice_message(token, channel, text, attachments):
     response = requests.post("https://slack.com/api/chat.postMessage",
         headers={"Authorization": "Bearer "+token},
         data={"channel": channel, "text": text, "attachments": attachments})
-Token = 'xoxb-3985950723973-3989033977427-CM9Dpponpkmj02XjOKpBqnJn'
-
+Token = GITHUB_TOKEN
 attach_dict = {
     'color' : '#ff0000',
     'author_name' : '새로운 공지사항이 등록되었습니다.',
